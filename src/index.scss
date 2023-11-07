@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+.lazy-load-image-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.circleRating {
+    background-color: white;
+
+    .CircularProgressbar-text {
+        font-size: 34px !important;
+        font-weight: 700;
+        fill: black !important;
+    }
+
+    .CircularProgressbar-trail {
+        stroke: transparent;
+    }
+}
+
+.playbtn,
+.videoThumbnail {
+    .triangle {
+        stroke-dasharray: 240;
+        stroke-dashoffset: 480;
+        stroke: white;
+        transform: translateY(0);
+        transition: all 0.7s ease-in-out;
+    }
+
+    .circle {
+        stroke: white;
+        stroke-dasharray: 650;
+        stroke-dashoffset: 1300;
+        transition: all 0.5s ease-in-out;
+    }
+
+    &:hover {
+        .triangle {
+            stroke-dashoffset: 0;
+            opacity: 1;
+            stroke: #1aafff;
+            animation: trailorPlay 0.7s ease-in-out;
+        }
+
+        .circle {
+            stroke-dashoffset: 0;
+            stroke: #1aafff;
+        }
+    }
+}
+
+.react-select-container {
+
+    .react-select__control {
+        border: 0;
+        outline: 0;
+        box-shadow: none;
+        background-color: black;
+        border-radius: 20px;
+
+        .react-select__value-container {
+
+            .react-select__placeholder,
+            .react-select__input-container {
+                color: white;
+                margin: 0 10px;
+            }
+        }
+
+        .react-select__single-value {
+            color: white;
+        }
+
+        .react-select__multi-value {
+            background-color: dimgrey;
+            border-radius: 10px;
+
+            .react-select__multi-value__label {
+                color: white;
+            }
+
+            .react-select__multi-value__remove {
+                background-color: transparent;
+                color: white;
+                cursor: pointer;
+
+                &:hover {
+                    color: lightslategray;
+                }
+            }
+        }
+    }
+
+    .react-select__menu {
+        top: 40px;
+        margin: 0;
+        padding: 0;
+    }
+}
